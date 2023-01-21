@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap'); /*Importando fonte do google fontes */
+
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #2B32B2,  #1488CC) /*Efeito degrade no fundo da pagina*/
+}
+
+
+main.container{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex; /*Criando uma container para o conteudo principal e habilitando a propriedade display flex, do flexbox, para colocarmos os itens lado a lado ao inves de um em baixo do outro*/
+}
+
+.left{ /*Dividindo a pagina e atribuindo o lado esquerdo a descrição e chamada para juntar-se a comunidade*/
+    width: 60%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.left h1{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.left img{
+    width: 45vw;
+    height: 80vh;
+}
+
+.right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 5px 5px 20px #000000;
+}
+
+.card > h2{
+    margin: 1rem 0 2rem 0;
+    font-size: 2rem;
+    font-weight: 550;
+    position: relative;
+}
+
+.card > h2::before{
+    content: " ";
+    position: absolute;
+    left: 1px;
+    margin-top: 31px;
+    width: 11%;
+    height: 5px;
+    background: #2B32B2;
+}
+
+.login{
+    margin-bottom: 0.7rem;
+}
+
+.login > .underline{
+    position: relative;
+}
+
+.login > .underline::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.login > .underline::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #2B32B2,#1488CC);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.login input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.login > input{
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.login > input::placeholder{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.dados-senha{
+    margin-top: 1.5rem;
+    display: flex;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.dados-senha a{
+    text-decoration: none;
+}
+
+.dados-senha > .salvar{
+    text-align: left;
+    color: rgba(0, 0, 0, 0.8);
+    vertical-align: top;
+}
+
+.recuperar{
+    text-align: right; 
+    margin-left: 1.5rem; 
+    margin-top: 0.2rem;  
+}
+
+.botao{
+    background: linear-gradient(to right, #2B32B2,#1488CC );
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.4rem;
+    font-weight: 550;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius:8px;
+    transition: 400ms all;
+}
+
+.botao:hover{
+    scale: 1.05;
+    background: linear-gradient(to left, #283282, #1488cc);
+}
+
+.footer .alternativa{
+    display: block;
+    text-align: center;
+    padding: 0.4rem;
+    margin: 0.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.footer .alternativa::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 120px;
+    height: 0.1px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.footer .alternativa::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 14px;
+    width: 120px;
+    height: 0.1px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.redes-sociais{
+    font-size: 0.9rem;
+}
+
+.redes-sociais a{
+    text-decoration: none;
+    color: white;
+}
+
+.redes-sociais i{
+  margin: 0.4rem;  
+}
+
+.redes-sociais > .google{
+    background: linear-gradient(to right, #DE3F32, #E38179);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.redes-sociais > .facebook{
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+
+}
+
+.redes-sociais > .twitter{
+    background: linear-gradient(to right, #56a7f2, #468aca);
+    border-radius: 4px;
+}
+
+.cadastro{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.cadastro a{
+    margin: 0.5rem;
+}
+
